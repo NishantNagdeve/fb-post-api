@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: fb-post-api
+
+test:
+  <<: *default
+  database: fb_post_api_test
+
+# production:
+#   <<: *default
+#   database: eshop_production
+#   username: eshop
+#   password: <%= ENV["ESHOP_DATABASE_PASSWORD"] %>
